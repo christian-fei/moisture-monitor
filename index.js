@@ -21,7 +21,7 @@ board.on('ready', function () {
       board: virtual
     })
     sensor.on('change', function () {
-      // logger.info('sensor.value', sensor.value)
+      console.log('sensor.value', sensor.value)
     })
   } catch (err) {
     console.error('failed moisture', err.message)
