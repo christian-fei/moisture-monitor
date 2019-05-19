@@ -6,6 +6,19 @@ const board = new five.Board({
 
 board.on('ready', function () {
   console.log('board ready')
-  const led = new five.Led(13)
-  led.blink()
+  try {
+    const led = new five.Led(13)
+    led.blink()
+  } catch (err) {
+    console.error('failed led', err.message)
+  }
+
+  try {
+    const sensor = new five.Sensor('A1')
+    sensor.on('change', function () {
+      // logger.info('sensor.value', sensor.value)
+    })
+  } catch (err) {
+    console.error('failed moisture', err.message)
+  }
 })
