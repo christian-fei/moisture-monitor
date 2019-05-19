@@ -17,7 +17,7 @@ module.exports = {
       repo: 'https://github.com/christian-fei/moisture-monitor.git',
       path: '/home/pi/apps/moisture-monitor',
       'pre-deploy': 'mkdir -p /home/pi/apps',
-      'post-deploy': 'npm i && ./node_modules/.bin/pm2 startOrGracefulReload ecosystem.config.js --env production'
+      'post-deploy': 'npm i && npm i raspi-io && ./node_modules/.bin/pm2 startOrGracefulReload ecosystem.config.js --env production'
     }
   }
 }
