@@ -18,6 +18,8 @@ board.on('ready', function () {
   try {
     const sensor = new five.Sensor({
       pin: 'A0',
+      freq: 1000,
+      threshold: 10,
       board: virtual
     })
     sensor.on('change', function () {
