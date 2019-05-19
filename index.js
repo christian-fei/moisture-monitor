@@ -6,6 +6,6 @@ const board = new five.Board({
 
 board.on('ready', function () {
   console.log('board ready')
-  const led = new five.Led('P1-13')
+  const led = new five.Led(13)
   led.blink()
 })
